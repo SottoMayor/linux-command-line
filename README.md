@@ -28,6 +28,8 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 `ls -al`
 
+`clear` -> clear the terminal
+
 ## Finding help for commands
 
 **`man [command]`** -> `man ls`
@@ -36,8 +38,11 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 **`apropos [supposed command]`** -> `apropos list`
 
-## 02_05 - Helpful keyboard shortcuts in the terminal
+## TAB (key) completion
 
+1. completes a file or folder name   
+2. makes guesses
+   
 `ls -l De` followed by the Tab key
 
 `ls -l Do` followed by the Tab key twice
@@ -46,7 +51,24 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 `a` followed by the Tab key
 
-`clear` (used throughout the course)
+## Helpful keyboard shortcuts
+
+| key combination | result |
+|-----------------|---------|
+| CRTL + A | Move to beginning of line| 
+| CRTL + E | Move to end of line|
+| arrows | Move letter by letter|
+| CRTL + -> | Move left one word | 
+| CRTL + <- | Move right one word |
+| CRTL + U | Delete from cursor to line start |
+| CRTL + K | Delete from cursor to line end |
+| CRTL + SHIFT + C | Copy |
+| CRTL + SHIFT + V | Paste |
+| (up + down) arrow | courses previous commands |
+| CRTL + R | Search command history |
+| CRTL + C | Cancel command |
+
+
 
 ## 03_01 - The Linux file system
 
