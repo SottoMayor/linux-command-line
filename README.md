@@ -79,9 +79,9 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 1. Absolute path: starts with `/`for the file system root.
 2. Relative path: does not.
 
-**`file Documents`** -> Determinates the file type
+**`file [document]`** -> Determinates the file type
 
-**`stat Documents`** -> display the file or file system status
+**`stat [document]`** -> display the file or file system status
 
 ## 03_03 - Navigating the file system
 
