@@ -32,11 +32,15 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 ## Finding help for commands
 
-**`man [command]`** -> `man ls`
+**`man [command]`** -> `man ls`   
+If we press `/`and enter what behavior we want to get, it tries to find in the list of options   
+`man ls [Enter] /comma separed [Enter] it should find if the search term matchs with any option description` 
 
 **`[command] --help`** -> `ls --help`
 
-**`apropos [supposed command]`** -> `apropos list`
+**`apropos [supposed command]`** -> `apropos list`   
+**`apropos "[what the command suppose to do]"`** -> using double quotes we can get an exactly match
+
 
 ## TAB (key) completion
 
