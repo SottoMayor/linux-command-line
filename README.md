@@ -74,13 +74,14 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 
 
 
-## 03_01 - The Linux file system
+## File system
 
-`ls -l`
+1. Absolute path: starts with `/`for the file system root.
+2. Relative path: does not.
 
-`file Documents`
+**`file Documents`** -> Determinates the file type
 
-`stat Documents`
+**`stat Documents`** -> display the file or file system status
 
 ## 03_03 - Navigating the file system
 
