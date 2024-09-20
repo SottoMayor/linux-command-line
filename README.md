@@ -83,35 +83,35 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 
 **`stat [document]`** -> display the file or file system status
 
-## 03_03 - Navigating the file system
+## Navigating the file system
 
-`cd Documents/`
+**`cd`** -> Change Directory
+**`pwd`** -> Print Working Directory
 
+Go to Document folder and print the current working directory:
+`cd Documents/` 
 `pwd`
 
-`cd Exercise Files` (invalid command)
+Using `cd`with directories with blanks:   
+1. Invalid command
+`cd Exercise Files`   
+2. Valid commands possibilities:
+2.1: Using double quotes   
+    `cd "Exercise Files"`
+2.2: Using scape (commom usage)
+   `cd Exercise\ Files`
 
-`cd Exercise\ Files`
+Listen files recursively:   
+`ls -R departments/`   
 
-`pwd`
-
-`ls`
-
-`ls -R departments/`
-
-`cd departments/hr/policies`
-
-`cd ..`
-
-`cd ..`
-
-`cd hr/policies`
-
-`cd ../../finance/documents`
-
-`cd -`
-
-`cd`
+Navigation between directories:  
+1. `cd departments/hr/policies` -> go to `departments/hr/policies` directory   
+2. `cd ..` -> up one level = `departments/hr`   
+3. `cd ..` -> up (more) one level = `departments`   
+4. `cd hr/policies` -> down two levels in a row = `departments/hr/policies`   
+5. `cd ../../finance/documents` -> down two levels in a row, enter in finance after documents = `departments/finance/documents`   
+6. `cd -` -> Back and forth between the previous and current directories   
+7. `cd` -> back to the home directory   
 
 ## 03_04 - Exploring the output of the ls command
 
