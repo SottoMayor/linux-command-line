@@ -113,17 +113,15 @@ Navigation between directories:
 6. `cd -` -> Back and forth between the previous and current directories   
 7. `cd` -> back to the home directory   
 
-## 03_04 - Exploring the output of the ls command
+## ls command, one of the most useful commands
 
 `ls`
 
-`ls --color=always`
+`ls --color=always` -> helpful to represent differents aspects of files
 
-`cd Documents/Exercise\ Files`
+`ls -l` -> use a long listing format (see metadata)
 
-`ls -l`
-
-`ls -lh`
+`ls -lh` -> see metadata in human readable way, helpful to verify file sizes.
 
 ## 03_05 - Create and remove directories
 
