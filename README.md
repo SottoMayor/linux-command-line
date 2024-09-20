@@ -123,23 +123,26 @@ Navigation between directories:
 
 `ls -lh` -> see metadata in human readable way, helpful to verify file sizes.
 
-## 03_05 - Create and remove directories
+## Create and remove directories
 
-`mkdir newfolder`
+Suppose a pre-existing `departments`folder...  
 
-`ls -l`
+1. **Create**
 
-`mkdir departments/customerservice`
+- `mkdir newfolder` -> creates a new folder `newfolder`    
 
-`mkdir departments/customerservice/documents departments/customerservice/cases departments/customerservice/awards`
+- `mkdir departments/customerservice` -> inside `departments` creates the `customerservice`
 
-`mkdir -p departments/legal/contracts`
+- `mkdir departments/customerservice/documents departments/customerservice/cases departments/customerservice/awards` -> creates more than 1 folder at once
 
-`rmdir departments/legal/contracts/`
+- `mkdir -p departments/legal/contracts` -> With the `-p`, creates a folder and parent folder at once
 
-`rmdir departments/legal/`
+2. **Remove**
 
-`rmdir departments/customerservice`
+- `rmdir departments/legal/contracts/` -> Removes folders. This removal is only allowed if the folder is empty.
+
+- `rmdir departments/legal/` -> removes the `legal` folder
+
 
 ## 03_06 - Copy, move, and delete files and directories
 
