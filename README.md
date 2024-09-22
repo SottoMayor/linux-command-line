@@ -185,21 +185,24 @@ _consult the man to more infos about this command_
 2. Absolute path:   
 `find ~/Documents -name "*d*"` -> find in the Documents directory, by name, all files that contains the caracther "d".
 
-## 03_08 - Understand user roles and sudo
+## 03_08 - The sudo
 
+_sudo means Super User DO_ 
+
+usage -> `sudo [Full Command]`
+
+A commum user can not access:   
 `ls /root`
 
+The sudo can access:  
 `sudo ls /root`
 
-`sudo ls /root`
-
+Removing the sudo privelegies of the user:   
 `sudo -k`
 
-`sudo ls /root`
-
+Starts an interactive shell as root:   
 `sudo -s`
 
-`exit`
 
 ## 03_10 - Modify file permissions
 
