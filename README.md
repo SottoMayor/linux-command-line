@@ -71,6 +71,7 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 | (up + down) arrow | courses previous commands |
 | CRTL + R | Search command history |
 | CRTL + C | Cancel command |
+| CRTL + L | Clear the terminal |
 
 
 
