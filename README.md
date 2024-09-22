@@ -104,6 +104,9 @@ Using `cd`with directories with blanks:
 Listen files recursively:   
 `ls -R departments/`   
 
+Single dot:   
+`.`-> represents the current working directory
+
 Navigation between directories:  
 1. `cd departments/hr/policies` -> go to `departments/hr/policies` directory   
 2. `cd ..` -> up one level = `departments/hr`   
@@ -111,7 +114,7 @@ Navigation between directories:
 4. `cd hr/policies` -> down two levels in a row = `departments/hr/policies`   
 5. `cd ../../finance/documents` -> down two levels in a row, enter in finance after documents = `departments/finance/documents`   
 6. `cd -` -> Back and forth between the previous and current directories   
-7. `cd` -> back to the home directory   
+7. `cd` -> back to the home directory
 
 ## ls command, one of the most useful commands
 
@@ -144,57 +147,33 @@ Suppose a pre-existing `departments`folder...
 - `rmdir departments/legal/` -> removes the `legal` folder
 
 
-## 03_06 - Copy, move, and delete files and directories
+## Copy, move, and delete files and directories
+1. **Copy**: `cp [file] [directory to copy and new name (optional)]`  
+   - `cp poems.txt poems2.txt` -> copy the poems.txt file to the same directory and set the copy name as `poems2.txt`
+   - `cp simple_data.txt departments/hr/employee\ info/` -> copy the poems.txt file to the directory `departments/hr/employee\ info`
+   - `cp simple_data.txt departments/new.txt` -> copy the poems.txt file to the directory `departments` and set the copy name as `new.txt`
 
-`cp poems.txt poems2.txt`
+2. **Move**: 
+   1. **Move a file**: `mv [file] [directory]`   
+      `mv poems2.txt departments/marketing`   
+   2. **Rename a file**: `mv [file] [same directory as the file + new name]`   
+      `mv departments/marketing/poems2.txt departments/marketing/literature.txt`
+      
+      Suppose you are in the `documents` directory and exists the `departments/marketing/literature.txt`subdirectory:
+      
+      `mv departments/marketing/literature.txt .` -> moves the `literature.txt`file to the current directory (`documents`, in this case).
 
-`ls`
+      `mv *.txt departments/marketing/` -> moves all files of the directory with .txt extension to `departments/marketing/`
+      `mv departments/marketing/* .` -> moves all files of the `departments/marketing/` directory to the current directory.
 
-`cp simple_data.txt departments/hr/employee\ info/`
 
-`ls departments/hr/employee\ info/`
-
-`mv poems2.txt departments/marketing`
-
-`ls departments/marketing/`
-
-`ls`
-
-`mv departments/marketing/poems2.txt departments/marketing/literature.txt`
-
-`ls departments/marketing/`
-
-`mv departments/marketing/literature.txt .`
-
-`ls`
-
-`ls`
-
-`mv *.txt departments/marketing/`
-
-`ls departments/marketing/`
-
-`mv departments/marketing/* .`
-
-`ls`
-
+3. **Remove**: `rm [file]` -> Warning: There is no chance to undo!   
 `rm literature.txt`
 
-`ls`
+Removing recursively:   
+`rm -r departments/customerservice/`   
 
-`cp poems.txt poems3.txt`
 
-`cp poems.txt poems4.txt`
-
-`ls`
-
-`rm poems?.txt`
-
-`ls`
-
-`rm departments/customerservice/`
-
-`rm -r departments/customerservice/`
 
 ## 03_07 - Find files from the command line
 
