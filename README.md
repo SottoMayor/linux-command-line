@@ -203,17 +203,22 @@ Removing the sudo privelegies of the user:
 Starts an interactive shell as root:   
 `sudo -s`
 
-## 03_11 - Create hard and symbolic links
+## Links
 
-`ln -s poems.txt writing.txt`
+`ln -s(optional) [target file] [link name]`   
 
-`ls -l`
+- soft (symbolic) link: points to another file, relative path   
+- Hard link: points to a specific data on the disk, absolute path   
 
-`cat writing.txt`
+_OBS_: Both breaks if the original file is moved away.   
 
+file points to another file, uses the -s option (view infos with `ls -l`):   
+`ln -s poems.txt writing.txt` -> creating the soft link writing.txt to the file poems.txt   
+
+`cat writing.txt` -> printing the file output   
+
+file points to the data of the disk, ommit the -s option (view infos with `ls -l`):   
 `ln poems.txt words.txt`
-
-`ls -l`
 
 ## 04_02 - Use pipes to connect commands together
 
