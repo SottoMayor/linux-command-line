@@ -181,10 +181,13 @@ Removing recursively:
 _consult the man to more infos about this command_
 
 1. Relative path:   
-   `find . -name "poe*"` -> find in the current directory, by name, all files that starts with "poe".
+   `find . -name "poe*"` -> finds in the current directory, by name, all files that starts with "poe".
    
 2. Absolute path:   
-`find ~/Documents -name "*d*"` -> find in the Documents directory, by name, all files that contains the caracther "d".
+`find ~/Documents -name "*d*"` -> finds in the Documents directory, by name, all files that contains the caracther "d".
+
+
+`find / -name "filename"` -> Searches recursively for files named 'filename' starting from the root directory.
 
 ## The sudo
 
