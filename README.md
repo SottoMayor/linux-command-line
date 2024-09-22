@@ -185,7 +185,7 @@ _consult the man to more infos about this command_
 2. Absolute path:   
 `find ~/Documents -name "*d*"` -> find in the Documents directory, by name, all files that contains the caracther "d".
 
-## 03_08 - The sudo
+## The sudo
 
 _sudo means Super User DO_ 
 
@@ -202,55 +202,6 @@ Removing the sudo privelegies of the user:
 
 Starts an interactive shell as root:   
 `sudo -s`
-
-
-## 03_10 - Modify file permissions
-
-`ls`
-
-`./test.sh`
-
-`ls -l test.sh`
-
-`stat test.sh`
-
-`chmod 644 test.sh` followed by Ctrl+C
-
-`chmod -x test.sh`
-
-`./test.sh`
-
-`bash test.sh`
-
-`cat test.sh`
-
-`chmod u-r test.sh`
-
-`chmod 244 test.sh` followed by Ctrl+C
-
-`cat test.sh`
-
-`chmod 755 test.sh`
-
-`./test.sh`
-
-`cat test.sh`
-
-`touch newfile`
-
-`stat newfile`
-
-`ls -l`
-
-`nano test.sh`
-
-`sudo chown root test.sh`
-
-`nano test.sh`
-
-`ls -l test.sh`
-
-`sudo chown [username] test.sh` (replace `[username]` with your user name)
 
 ## 03_11 - Create hard and symbolic links
 
