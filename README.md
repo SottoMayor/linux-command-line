@@ -175,17 +175,15 @@ Removing recursively:
 
 
 
-## 03_07 - Find files from the command line
+## Command find, basic usage
 
-`find . -name "poe*"`
+_consult the man to more infos about this command_
 
-`find . -name "do*"`
-
-`find . -name "d*"`
-
-`find . -name "*d*"`
-
-`find ~/Documents -name "*d*"`
+1. Relative path:   
+   `find . -name "poe*"` -> find in the current directory, by name, all files that starts with "poe".
+   
+2. Absolute path:   
+`find ~/Documents -name "*d*"` -> find in the Documents directory, by name, all files that contains the caracther "d".
 
 ## 03_08 - Understand user roles and sudo
 
