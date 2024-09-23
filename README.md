@@ -224,13 +224,18 @@ file points to another file, uses the -s option (view infos with `ls -l`):
 file points to the data of the disk, ommit the -s option (view infos with `ls -l`):   
 `ln poems.txt words.txt`
 
-## 04_02 - Use pipes to connect commands together
+## Pipes
 
+pipe: `|`-> takes the output of one command and send it to another.   
+
+- echo: prints out the argument.   
 `echo "Hello"`
 
-`echo "Hello" | wc`
+- wc: print newline, word, and byte counts for each file.
 
-`echo "Hello world from the command line" | wc`
+- Combining echo + wc in one go with the help of pipe:   
+1.`echo "Hello" | wc`   
+2.`echo "Hello world from the command line" | wc`
 
 ## 04_03 - View text files with cat, head, tail, and less
 
