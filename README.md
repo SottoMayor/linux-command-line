@@ -226,7 +226,7 @@ file points to the data of the disk, ommit the -s option (view infos with `ls -l
 
 ## Pipes
 
-pipe: `|`-> takes the output of one command and send it to another.   
+pipe: `|`-> takes the output of one command and send it to another. The order matters!   
 
 - echo: prints out the argument.   
 `echo "Hello"`
@@ -237,23 +237,33 @@ pipe: `|`-> takes the output of one command and send it to another.
 1.`echo "Hello" | wc`   
 2.`echo "Hello world from the command line" | wc`
 
-## 04_03 - View text files with cat, head, tail, and less
+## View text files
 
+1. cat -> _Concatenate_ files and print on the standard output   
 `cat poems.txt`
 
+We can enumarate lines with this command   
+`cat -n poems.txt`
+
+2. head -> output the first part of files   
 `head poems.txt`
 
+We can configure the number of lines to be displayed   
 `head -n5 poems.txt`
 
+3. tail -> output the last part of files   
 `tail -n3 poems.txt`
 
-`cat poems.txt | cat -n | tail -n5`
 
-`cat poems.txt | tail -n5 | cat -n`
+We can combine them with pipes! And remember, the order matters.
 
-`less poems.txt`
+- `cat poems.txt | cat -n | tail -n5`   
 
-`cat poems.txt | less`
+- `cat poems.txt | tail -n5 | cat -n`
+
+- `less poems.txt`
+
+- `cat poems.txt | less`
 
 ## 04_04 - Search for text in files and streams with grep
 
