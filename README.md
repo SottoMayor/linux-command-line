@@ -265,17 +265,20 @@ We can combine them with pipes! And remember, the order matters.
 
 - `cat poems.txt | less`
 
-## 04_04 - Search for text in files and streams with grep
+## Search for text in files and streams with grep
 
-`grep "the" poems.txt`
+- It is case sensitive by default.   
 
-`grep -n "the" poems.txt`
+`grep "the" poems.txt` -> searches by a search term.
 
-`grep -n "The" poems.txt`
+`grep -n "the" poems.txt` -> searches by term and using the line count output (`-n`)
 
-`grep -in "The" poems.txt`
+`grep -in "The" poems.txt` -> searches considering case insensitive and line count (`-in`)
 
-`grep -vi "the" poems.txt``grep -E "\w{6.}" poems.txt`
+`grep -vi "the" poems.txt` -> searches considering case insensitive ant to ommit the lines that matches the search term (`-vi`)
+
+Using regex (`-E`):
+`grep -E "\w{6.}" poems.txt` -> Get the lines that have words with at least 6 characters.
 
 ## 04_05 - Manipulate text with awk, sed, and sort
 
