@@ -316,75 +316,46 @@ We can provide the column to perform the sort.
 We can ignore duplicates, `-u` gets only unique lines:   
 `sort -u dupes.txt`   
 
-## 04_06 - Edit text with Vim
+## Working with tar and zip archives
 
-`vi`
+**tar**:   
+- **T**ape **ar**chives (format: .tar).   
+- Put many files together inside one file.   
+- Data compression is optional (formats: .tar.gz, .tgz, ...).   
+- Command: `tar [options] [tar filename] [directory or files to include in the archive]`
 
-`vi poems.txt`
+Create a regular tar archive:   
+`tar -cvf myfiles.tar Exercise\ Files/` -> `-c` = create an archive | `-v` = verbose | `-f` = output the archive to a file.
 
-## 04_07 - Edit text with nano
+`tar -caf myfiles.tar.gz Exercise\ Files/` -> `-a` = let tar figure out what kind of compression to use, based on the file extension.   
 
-`nano`
+Extracting an archive:   
+`tar -xf myfiles.tar.gz`
 
-`nano poems.txt`
+Extract a file into a folder:   
+1- create the folder:   
+`mkdir unpack2`   
+2 - Extract the file:   
+`tar -xf myfiles.tar.gz -C unpack2` -> `-C` = directory to extract the file.   
 
-## 04_08 - Working with tar and zip archives
 
-`cd ..`
+**zip**:   
+- More cross platform friendly.   
+- You might need to install depending on your distro.  
+- Command: `zip [options] [zip filename].zip [directory or files to zip]`   
 
-`tar -cvf myfiles.tar Exercise\ Files/`
+Zip files:    
+`zip -r exfiles.zip Exercise\ Files/`   
 
-`ls -l`
+Unzip (extract) files:     
+`unzip exfiles.zip`   
 
-`tar -caf myfiles.tar.gz Exercise\ Files/`
+Unzip (extract) a file into a folder:   
+1- create the folder:   
+`mkdir unpack4`   
+2 - Extract the file:   
+`unzip exfiles.zip -d unpack4` -> `-d` = destination directory.   
 
-`tar -caf myfiles.tar.bz2 Exercise\ Files/`
-
-`ls -lh`
-
-`mkdir unpack1`
-
-`mv myfiles.tar.bz2 unpack1/`
-
-`cd unpack1/`
-
-`tar -xf myfiles.tar.bz2`
-
-`ls -l`
-
-`cd Exercise\ Files`
-
-`ls`
-
-`cd ~/Documents/`
-
-`mkdir unpack2`
-
-`tar -xf myfiles.tar.gz -C unpack2`
-
-`ls unpack2`
-
-`zip -r exfiles.zip Exercise\ Files/`
-
-`ls -lh`
-
-`mkdir unpack3`
-
-`mv exfiles.zip unpack3`
-
-`cd unpack3`
-
-`unzip exfiles.zip`
-
-`ls -l`
-
-`cd ..`
-
-`mkdir unpack4`
-
-`unzip unpack3/exfiles.zip -d unpack4`
-
-`ls -l unpack4`
 
 ## 04_11 - Output redirection
 
