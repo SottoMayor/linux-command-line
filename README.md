@@ -280,25 +280,41 @@ We can combine them with pipes! And remember, the order matters.
 Using regex (`-E`):
 `grep -E "\w{6.}" poems.txt` -> Get the lines that have words with at least 6 characters.
 
-## 04_05 - Manipulate text with awk, sed, and sort
+## Manipulate text with awk, sed, and sort
 
+1. `awk`:
+   - extract specific text from a file.   
+   - written at the command line or stored in a file.   
+2. `sed`:   
+   - **S**tream **ed**itor.   
+   - Modifynig text in a command line or in place in a file.   
+
+-`awk`:   
+Suppose a text file, like a positional file, named simple_data.txt:   
 `cat simple_data.txt`
 
-`awk '{print $2}' simple_data.txt`
+Right after `awk`declaration comes the _awk program_, between single quotes:   
+`awk '{print $2}' simple_data.txt` -> show only the 2 column of this file.
 
-`awk '{print $2 "\t" $1}' simple_data.txt`
+We can scape inside awk programs, `"\t"` is a tab character:   
+`awk '{print $2 "\t" $1}' simple_data.txt` -> show the 2 column, give a tab and show the 1 column.
 
-`awk '{print $2 "\t" $1}' simple_data.txt | sort -n`
+We can use pipes also, `sort -n` makes a numeric sort:    
+`awk '{print $2 "\t" $1}' simple_data.txt | sort -n` -> Do the same as above and, in the end, provides a numeric sort (in this file in particular, order by a the ID column).
 
-`cat simple_data.txt`
+-`sed`:
+We can substitute words by another words:   
+`sed s/Orange/Red/ simple_data.txt` -> substitutes "Orange" by "Red".   
 
-`sort simple_data.txt`
+-`sort` -> sort line of text:
+`sort simple_data.txt` -> Sort by the first column by default.   
 
-`sort -k2 simple_data.txt`
+We can provide the column to perform the sort.   
+`sort -k2 simple_data.txt` -> Do the sort using the second column.   
+`sort -k2 -n simple_data.txt` -> Do the sort using the second column, if this column is numeric.   
 
-`cat dupes.txt`
-
-`sort -u dupes.txt`
+We can ignore duplicates, `-u` gets only unique lines:   
+`sort -u dupes.txt`   
 
 ## 04_06 - Edit text with Vim
 
