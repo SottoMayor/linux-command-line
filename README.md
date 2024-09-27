@@ -1,6 +1,6 @@
 # Personal Linux Command Line Docs - Bash
 
-## Basic Informations
+## 1. Basic Informations
 
 ### Commands
 
@@ -20,7 +20,7 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 * **Home directory**: Since we opened the Terminal and the `~` is displayed on the screen, we are in the home directory.
 
-## Write commands in a shell at the prompt
+## 2. Write commands in a shell at the prompt
 
 `ls`
 
@@ -30,7 +30,7 @@ From now on, let's refer to a 'Full Command' simply as 'Command', since there is
 
 `clear` -> clear the terminal
 
-## Finding help for commands
+## 3. Finding help for commands
 
 **`man [command]`** -> `man ls`   
 If we press `/`and enter what behavior we want to get, it tries to find in the list of options   
@@ -42,7 +42,7 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 **`apropos "[what the command suppose to do]"`** -> using double quotes we can get an exactly match
 
 
-## TAB (key) completion
+## 3. TAB (key) completion
 
 1. completes a file or folder name   
 2. makes guesses
@@ -55,7 +55,7 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 
 `a` followed by the Tab key
 
-## Helpful keyboard shortcuts
+## 4. Helpful keyboard shortcuts
 
 | key combination | result |
 |-----------------|---------|
@@ -75,7 +75,7 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 
 
 
-## File system
+## 5. File system
 
 1. Absolute path: starts with `/`for the file system root.
 2. Relative path: does not.
@@ -84,7 +84,7 @@ If we press `/`and enter what behavior we want to get, it tries to find in the l
 
 **`stat [document]`** -> display the file or file system status
 
-## Navigating the file system
+## 6. Navigating the file system
 
 **`cd`** -> Change Directory
 **`pwd`** -> Print Working Directory
@@ -117,7 +117,7 @@ Navigation between directories:
 6. `cd -` -> Back and forth between the previous and current directories   
 7. `cd` -> back to the home directory
 
-## ls command, one of the most useful commands
+## 7. ls command, one of the most useful commands
 
 `ls`
 
@@ -127,7 +127,7 @@ Navigation between directories:
 
 `ls -lh` -> see metadata in human readable way, helpful to verify file sizes.
 
-## Create and remove directories
+## 8. Create and remove directories
 
 Suppose a pre-existing `departments`folder...  
 
@@ -148,7 +148,7 @@ Suppose a pre-existing `departments`folder...
 - `rmdir departments/legal/` -> removes the `legal` folder
 
 
-## Copy, move, and delete files and directories
+## 9. Copy, move, and delete files and directories
 1. **Copy**: `cp [file] [directory to copy and new name (optional)]`  
    - `cp poems.txt poems2.txt` -> copy the poems.txt file to the same directory and set the copy name as `poems2.txt`
    - `cp simple_data.txt departments/hr/employee\ info/` -> copy the poems.txt file to the directory `departments/hr/employee\ info`
@@ -176,7 +176,7 @@ Removing recursively:
 
 
 
-## Command find, basic usage
+## 10. Command find, basic usage
 
 _consult the man to more infos about this command_
 
@@ -207,7 +207,7 @@ Removing the sudo privelegies of the user:
 Starts an interactive shell as root:   
 `sudo -s`
 
-## Links
+## 11. Links
 
 `ln -s(optional) [target file] [link name]`   
 
@@ -224,7 +224,7 @@ file points to another file, uses the -s option (view infos with `ls -l`):
 file points to the data of the disk, ommit the -s option (view infos with `ls -l`):   
 `ln poems.txt words.txt`
 
-## Pipes
+## 12. Pipes
 
 pipe: `|`-> takes the output of one command and send it to another. The order matters!   
 
@@ -237,7 +237,7 @@ pipe: `|`-> takes the output of one command and send it to another. The order ma
 1.`echo "Hello" | wc`   
 2.`echo "Hello world from the command line" | wc`
 
-## View text files
+## 13. View text files
 
 1. cat -> _Concatenate_ files and print on the standard output   
 `cat poems.txt`
@@ -265,7 +265,7 @@ We can combine them with pipes! And remember, the order matters.
 
 - `cat poems.txt | less`
 
-## Search for text in files and streams with grep
+## 14. Search for text in files and streams with grep
 
 - It is case sensitive by default.   
 
@@ -280,7 +280,7 @@ We can combine them with pipes! And remember, the order matters.
 Using regex (`-E`):
 `grep -E "\w{6.}" poems.txt` -> Get the lines that have words with at least 6 characters.
 
-## Manipulate text with awk, sed, and sort
+## 15. Manipulate text with awk, sed, and sort
 
 1. `awk`:
    - extract specific text from a file.   
@@ -316,7 +316,7 @@ We can provide the column to perform the sort.
 We can ignore duplicates, `-u` gets only unique lines:   
 `sort -u dupes.txt`   
 
-## Working with tar and zip archives
+## 16. Working with tar and zip archives
 
 **tar**:   
 - **T**ape **ar**chives (format: .tar).   
@@ -357,13 +357,13 @@ Unzip (extract) a file into a folder:
 `unzip exfiles.zip -d unpack4` -> `-d` = destination directory.   
 
 
-## Environment variables and PATH
+## 17. Environment variables and PATH
 
 `env` -> List the system's path.   
 
 `echo $PATH` -> displays the value on PATH env var.   
 
-## Linux distribution information 
+## 18. Linux distribution information 
 
 View infos in short-hand way:   
 `cat /etc/lsb-release`
@@ -378,7 +378,7 @@ View Linux Kernel informations:
 `uname -a` -> View all informations   
 `uname -r` -> View only the version of the Kernel.  
 
-## 05_03 - Install and update software with a package manager
+## 19. Install and update software with a package manager
 
 Checks if everything is up to date  (interesting running before install any package):   
 `sudo apt update`   
