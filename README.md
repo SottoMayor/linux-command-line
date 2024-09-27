@@ -378,38 +378,13 @@ View Linux Kernel informations:
 `uname -a` -> View all informations   
 `uname -r` -> View only the version of the Kernel.  
 
-## 05_02 - Find system hardware and disk information
-
-`free -h`
-
-`cat /proc/cpuinfo`
-
-`lscpu`
-
-`df -h`
-
-`sudo du -hd1 /`
-
-`sudo lshw | less`
-
-`ip a`
-
 ## 05_03 - Install and update software with a package manager
 
-`apt search tree`
+Checks if everything is up to date  (interesting running before install any package):   
+`sudo apt update`   
 
-`apt show tree`
+Installs a package:   
+`sudo apt install tree`   
 
-`tree`
-
-`sudo apt update`
-
-`sudo apt install tree`
-
-`tree`
-
-`man tree`
-
-`sudo apt update`
-
+Installs new versions of packages:   
 `sudo apt upgrade`
