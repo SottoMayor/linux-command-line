@@ -357,65 +357,26 @@ Unzip (extract) a file into a folder:
 `unzip exfiles.zip -d unpack4` -> `-d` = destination directory.   
 
 
-## 04_11 - Output redirection
+## Environment variables and PATH
 
-`cd Exercise\ Files`
+`env` -> List the system's path.   
 
-`ls`
+`echo $PATH` -> displays the value on PATH env var.   
 
-`ls 1> filelist.txt`
+## Linux distribution information 
 
-`cat filelist.txt`
-
-`ls > filelist2.txt`
-
-`cat filelist2.txt`
-
-`ls notreal`
-
-`ls notreal > filelist3.txt`
-
-`ls notreal 2> filelist4.txt`
-
-`cat filelist4.txt`
-
-`>filelist4.txt`
-
-`cat filelist4.txt`
-
-`ls > filelist5.txt`
-
-`echo "some appended text" >> filelist5.txt`
-
-`cat filelist5.txt`
-
-## 04_12 - Exploring environment variables and PATH
-
-`env`
-
-`echo $PATH`
-
-`which ls`
-
-`which less`
-
-`ls -a`
-
-`nano ~/.bash_profile`
-
-## 05_01 - Find information about your Linux distribution
-
-`ls -l /etc/*release`
-
+View infos in short-hand way:   
 `cat /etc/lsb-release`
 
+View infos in more detailed way:   
 `cat /etc/os-release`
 
+View infos in these two ways at once:   
 `cat /etc/*release`
 
-`uname -a`
-
-`uname -r`
+View Linux Kernel informations:   
+`uname -a` -> View all informations   
+`uname -r` -> View only the version of the Kernel.  
 
 ## 05_02 - Find system hardware and disk information
 
